@@ -28,7 +28,7 @@ with st.sidebar:
 
     temperature = 0.70
     top_p = 0.26
-    max_length = 20
+    max_length = st.sidebar.slider('max_length', min_value=5, max_value=125, value=20, step=5)
 
 # Function for generating LLaMA2 response
 def generate_llama2_response(dish_name, keywords):
