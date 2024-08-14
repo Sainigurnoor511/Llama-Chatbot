@@ -28,7 +28,7 @@ with st.sidebar:
 
     temperature = 0.70
     top_p = 0.26
-    max_length = 12
+    max_length = 20
 
 # Function for generating LLaMA2 response
 def generate_llama2_response(dish_name, keywords):
