@@ -33,17 +33,17 @@ with st.sidebar:
 # Function for generating LLaMA2 response
 def generate_llama2_response(dish_name, keywords):
 
-    string_dialogue = f"You are product description assistant. Please provide a product description for Dish Name: {dish_name}\nKeywords: {keywords}\n"
+    string_dialogue = f"You are product description assistant. Please provide a product description for Dish Name: {dish_name}\nKeywords: {keywords}\n in maximum of {max_length} words."
 
     #TODO: remove later
     # prompt_input = f"Dish Name: {dish_name}\nKeywords: {keywords}\n"
     # string_dialogue = "You are product description assistant. Please provide a product description for "
     
     output = replicate.run(llm,input={"prompt": f"{string_dialogue}",
-                                      "temperature":temperature, 
-                                      "top_p":top_p, 
-                                      "max_length":max_length, 
-                                      "repetition_penalty":1
+                                    #   "temperature":temperature, 
+                                    #   "top_p":top_p, 
+                                    #   "max_length":max_length, 
+                                    #   "repetition_penalty":1
                                     })
 
     return output
